@@ -39,7 +39,7 @@ public class Health {
     }
 
     @DeleteMapping("/delete")
-    public void delete(@RequestBody Pharma pharma){
+    public void delete(@RequestBody Pharma pharmma){
         healthRepo.delete(pharma);
     }
     @DeleteMapping("/deleteall")
