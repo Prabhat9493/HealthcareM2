@@ -4,7 +4,6 @@ import com.medanta.healthcare.model.Pharma;
 import com.medanta.healthcare.repository.HealthRepo;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,7 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/Employeehealth")
-public class Health {
+public class HealthController {
 
     @Autowired
     HealthRepo healthRepo;
@@ -39,7 +38,7 @@ public class Health {
     }
 
     @DeleteMapping("/delete")
-    public void delete(@RequestBody Pharma pharmma){
+    public void delete(@RequestBody Pharma pharma){
         healthRepo.delete(pharma);
     }
     @DeleteMapping("/deleteall")
